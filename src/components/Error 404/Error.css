@@ -1,0 +1,30 @@
+.error-section{
+    width: 100%;
+    height: 75vh;
+}
+
+.error-con{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-txt{
+    text-align: center;
+}
+
+.error-txt > h1{
+    font-family: "Poppins",sans-serif;
+    font-size: 2.25rem;
+    color: #ff0800;
+    margin: 0;
+}
+
+.error-txt > p{
+    margin: 0;
+    color: #010101;
+    font-size: 1.275rem;
+}
+

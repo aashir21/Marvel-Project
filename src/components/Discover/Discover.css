@@ -1,0 +1,211 @@
+
+html{
+    overflow-x: hidden;
+}
+
+.discover-heading{
+    color: #FFFF;
+    font-size: 3.5rem;
+    font-family: "Poppins",sans-serif;
+    background-color: rgba(0,0,0,.75);
+    padding: .75rem;
+    border-radius: 10px;
+}
+
+.custom{
+    width: 100%;
+    height: 85vh;
+}
+
+.section-title{
+    margin: 2rem auto;
+    width: 75%;
+    height: auto;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 1.75rem;
+    font-family: "Poppins",sans-serif;
+}
+
+.news{
+    width: 100%;
+    height: 75vh;
+    
+}
+
+.news-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.news-card{
+    width: 400px;
+    height: 400px;
+    background-image: url('https://pbs.twimg.com/media/FUYEiRlUsAABsTn.jpg:large');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all ease-in 200ms;
+}
+
+.news-card:hover{
+    margin-bottom: 1rem;
+}
+
+.card1{
+    background-image: url('https://pbs.twimg.com/media/FUYEiRlUsAABsTn.jpg:large');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    border-top-right-radius: 20px;
+}
+
+.card2{
+    background-image: url('https://pbs.twimg.com/media/FYZLNKvWQAQZHCU?format=jpg&name=small');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    border-top-left-radius: 20px;
+}
+
+
+.card3{
+    background-image: url('https://m.media-amazon.com/images/M/MV5BMzZiOTE5ZmQtZGNmYy00MzU3LTgwYzAtNTNhN2ZkY2U1ZWM1XkEyXkFqcGdeQXVyNzEzNjU1NDg@._V1_.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    border-top-right-radius: 20px;
+}
+
+.card4{
+    background-image: url('https://pbs.twimg.com/media/FS-8x7TVIAAe8Ra?format=jpg&name=medium');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    border-top-left-radius: 20px;
+}
+
+.news-card-text{
+    
+    width: 75%;
+    text-align: left;
+    align-self: flex-end;
+}
+
+.news-card-text > p{
+    color: white;
+    font-family: "Poppins",sans-serif;
+    font-size: 1.75rem;
+    text-shadow: 2px 2px #000;
+}
+
+.trailer-section{
+    width: 100%;
+    height: 75vh;
+    margin-bottom: 5rem;
+}
+
+.trailer-con{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trailer-title{
+    margin: 0.5rem auto;
+    width: 75%;
+    height: auto;
+    
+    text-align: center;
+    font-size: 1.75rem;
+    font-family: "Poppins",sans-serif;
+}
+
+@media screen and (min-width: 400px) and (max-width: 749px){
+    .section-title{
+        width: auto;
+        font-size: 1.25rem;
+    }
+
+    .news{
+        height: auto;
+    }
+
+    .news-container{
+        flex-direction: column;
+
+    }
+
+    .news-card{
+        margin: 1rem 0;
+        width: 350px;
+        border-radius: 0;
+    }
+    
+
+    .trailer-title{
+        font-size: 1.25rem;
+        width: auto;
+        margin: 0;
+    }
+
+    .trailer-iframe{
+        width: 350px;
+        height: 400px;
+        
+    }
+
+    .news-card-text > p{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width: 399px){
+    .section-title{
+        width: auto;
+        font-size: 1.175rem;
+    }
+
+    .news{
+        height: auto;
+    }
+
+    .news-container{
+        flex-direction: column;
+
+    }
+
+    .news-card{
+        margin: 1rem 0;
+        width: 300px;
+        border-radius: 0;
+    }
+    
+
+    .trailer-title{
+        font-size: 1.25rem;
+        width: auto;
+        margin: 0;
+    }
+
+    .trailer-iframe{
+        width: 300px;
+        height: 350px;
+        
+    }
+
+    .news-card-text > p{
+        font-size: 1.35rem;
+    }
+}

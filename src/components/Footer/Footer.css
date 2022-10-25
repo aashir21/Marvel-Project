@@ -1,0 +1,86 @@
+.footer{
+    height: auto;
+    width: 100%;
+    background-color: whitesmoke;
+    position: absolute;
+    
+}
+
+.footer-container{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.footer-text > ul > a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.footer-label{
+    margin: 2rem 0;
+    width: 100%;
+    height: auto;
+}
+
+.footer-label-title {
+    
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem ;
+    width: auto;
+    color: white;
+    background-color: red;
+    font-family: Anton, sans-serif;
+    letter-spacing: 2px;
+    
+}
+
+.footer-text > ul {
+    padding: 1rem 0;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.footer-text > ul > a > li {
+    list-style: none;
+    font-size: 1.25rem;
+    margin: 1rem 0;
+    color: black;
+}
+
+.footer-text > h3{
+    
+   text-align: center;
+    
+}
+
+.company-name{
+    color: orangered;
+    font-family: "Poppins",sans-serif;
+}
+
+@media screen and (min-width: 400px) and (max-width:700px){
+    .footer-label-title{
+        font-size: 1.5rem;
+    }
+
+    .footer-text > ul > a >li {
+        font-size: 1.125rem;
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width:399px){
+    .footer-label-title{
+        font-size: 1.25rem;
+    }
+
+    .footer-text > ul > a >li {
+        font-size: 1.1rem;
+    }
+}
