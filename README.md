@@ -21,6 +21,7 @@ Completed
 * React JS (v17.0.2)
 * React Router (v6.2.1)
 * REST APIs
+* Sass / SCSS
 
 
 ## Features 
