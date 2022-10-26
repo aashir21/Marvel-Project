@@ -3,6 +3,7 @@
 ## Table Of Contents
 
 - [General Info](#general-info)
+- [Project Status](#project-status)
 - [Technologies](#technologies)
 - [Features](#features)
 
@@ -15,6 +16,7 @@ DIVE IN
 ### Project Status
 
 Completed
+- https://marvelinfohub.netlify.app/
 
 ## Technologies
 
