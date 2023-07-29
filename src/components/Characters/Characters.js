@@ -43,11 +43,19 @@ function Characters() {
             <div className='char-container'>
               {
                 hero.map((heros) =>{
+
+                  const notAvailableSrc = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg";
+                  var availableSrc = heros.thumbnail.path + "." + heros.thumbnail.extension
+                  if(availableSrc === notAvailableSrc){
+                    availableSrc = "https://i.pinimg.com/736x/0e/3e/4a/0e3e4ad2efbc68906efb76d0b1928fee--marvel.jpg"
+                  }
+
                   return(
                     <Link className='card-link' to={`/chardetails/${heros.id}`}>
+
                       <div className='card' key={heros.id}>
                         <div className='card-img'>
-                          <img src={heros.thumbnail.path + "." + heros.thumbnail.extension} alt="character-img"></img>
+                          <img src={availableSrc} alt="character-img"></img>
                         </div>
                         <div className='card-text'>
                           <p>{heros.name}</p>

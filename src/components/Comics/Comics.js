@@ -41,11 +41,18 @@ function Comics() {
             <div className='comic__container'>
                 {
                     comicList.map((com)=>{
+
+                        const notAvailableSrc = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg";
+                        var availableSrc = com.thumbnail.path + "." + com.thumbnail.extension
+                        if(availableSrc === notAvailableSrc){
+                            availableSrc = "https://i.pinimg.com/736x/0e/3e/4a/0e3e4ad2efbc68906efb76d0b1928fee--marvel.jpg"
+                        }
+
                         return(
                             <Link to={`/comicdetails/${com.id}/${com.title}`} style={{textDecoration:'none'}}>
                                 <div className='comic__card' key={com.id}>
                                     <div className='comic__card__img'>
-                                        <img src={com.thumbnail.path + "." + com.thumbnail.extension}></img>
+                                        <img src={availableSrc}></img>
                                     </div>
                                     <div className='comic__card__text'>
                                         <p>{com.title}</p>

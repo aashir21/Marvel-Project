@@ -1,8 +1,8 @@
 .hero-banner {
   width: 75%;
-  margin: auto;
+  margin: 3rem auto;
   height: 75vh;
-  background-image: url("https://www.komar.de/en/media/cms/fileadmin/user_upload/Category/Fototapeten/Marvel/komar-fototapeten-marvel.jpg");
+  background-image: url("https://wallpapercave.com/wp/wp4920103.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -52,14 +52,14 @@
 .card {
   width: 200px;
   height: 320px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 1rem;
   cursor: pointer;
 }
 
 .title h1 {
   font-size: 3.5rem;
-  color: #ff0800;
+  color: #FFFFFF;
   font-family: Anton, sans-serif;
   letter-spacing: 3px;
   text-align: center;
@@ -69,22 +69,31 @@
 .card-img {
   height: 75%;
   width: 100%;
+  display: grid;
+  align-items: center;
 }
 
 .card-img img {
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 90%;
   object-fit: cover;
+  margin: 0 auto;
+  overflow-y: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .card-text {
-  width: 90%;
+  width: 100%;
   margin: auto;
   text-align: center;
+  display: grid;
+  align-items: center;
   font-size: 1.1rem;
   font-family: Lora, sans-serif;
-  color: #ff0800;
+  color: #FFFFFF;
+  background-color: #171616;
   font-weight: 500;
+  height: 25%;
 }
 
 .card-link {
@@ -100,10 +109,10 @@
 .page-btn {
   padding: 0.75rem;
   margin: 0.75rem;
-  border: 2px solid #ff0800;
+  border: 2px solid #FFFFFF;
   font-family: Anton, sans-serif;
-  color: #ff0800;
-  background-color: white;
+  color: #FFFFFF;
+  background-color: #171616;
   border-radius: 25px;
   cursor: pointer;
 }
