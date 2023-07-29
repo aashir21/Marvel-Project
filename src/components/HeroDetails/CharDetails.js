@@ -33,7 +33,13 @@ function CharDetails() {
           {
         details.map(detail => {
 
-          const link = detail.thumbnail.path + "." + detail.thumbnail.extension
+          var link = detail.thumbnail.path + "." + detail.thumbnail.extension
+          const notAvailableSrc = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg";
+
+          if(link === notAvailableSrc){
+            link = "https://i.pinimg.com/736x/0e/3e/4a/0e3e4ad2efbc68906efb76d0b1928fee--marvel.jpg"
+          }
+
           document.title = detail.name
 
           return(
@@ -50,7 +56,7 @@ function CharDetails() {
               <div className='description-con'>
                 <h1>DESCRIPTION</h1>
                 {
-                  (detail.description) || <p>No Suitable Description Found.</p>
+                  (detail.description) || <p style={{color:"#FFFF"}} className='not-fnd'>No Suitable Description Found.</p>
                 }
               </div>
 
@@ -63,7 +69,7 @@ function CharDetails() {
                   </div>
                   <div className='comics-list'>
                     {
-                      comics.length === 0 ? <p className='not-fnd'>No data available.</p>
+                      comics.length === 0 ? <p style={{color:"#FFFF"}} className='not-fnd'>No data available.</p>
                       :
                       comics.map(comic => {
                         return(
@@ -85,7 +91,7 @@ function CharDetails() {
                   </div>
                   <div className='comics-list'>
                     {
-                      stories.length === 0 ? <p className='not-fnd'>No data available.</p>
+                      stories.length === 0 ? <p style={{color:"#FFFF"}} className='not-fnd'>No data available.</p>
                       :
                       stories.map(story => {
                         return(

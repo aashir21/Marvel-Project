@@ -37,7 +37,13 @@ function ComicDetails() {
             {
             comicDetails.map(cDetails => {
                 
-                const link = cDetails.thumbnail.path + "." + cDetails.thumbnail.extension;
+                var link = cDetails.thumbnail.path + "." + cDetails.thumbnail.extension;
+                const notAvailableSrc = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg"
+
+                if(link === notAvailableSrc){
+                    link = "https://i.pinimg.com/736x/0e/3e/4a/0e3e4ad2efbc68906efb76d0b1928fee--marvel.jpg"
+                }
+
                 document.title = cDetails.title;
 
                 return(

@@ -46,7 +46,7 @@ function Characters() {
 
                   const notAvailableSrc = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg";
                   var availableSrc = heros.thumbnail.path + "." + heros.thumbnail.extension
-                  if(availableSrc === notAvailableSrc){
+                  if(availableSrc === notAvailableSrc || availableSrc === "http://i.annihil.us/u/prod/marvel/i/mg/f/60/4c002e0305708.gif"){
                     availableSrc = "https://i.pinimg.com/736x/0e/3e/4a/0e3e4ad2efbc68906efb76d0b1928fee--marvel.jpg"
                   }
 
@@ -55,7 +55,7 @@ function Characters() {
 
                       <div className='card' key={heros.id}>
                         <div className='card-img'>
-                          <img src={availableSrc} alt="character-img"></img>
+                          <img src={availableSrc} alt="character-img" loading='lazy'></img>
                         </div>
                         <div className='card-text'>
                           <p>{heros.name}</p>

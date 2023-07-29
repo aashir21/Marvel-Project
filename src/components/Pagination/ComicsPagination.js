@@ -46,7 +46,7 @@ function ComicsPagination() {
                             <Link to={`/comicdetails/${com.id}/${com.title}`} style={{textDecoration:'none'}}>
                                 <div className='comic__card' key={com.id}>
                                     <div className='comic__card__img'>
-                                        <img src={com.thumbnail.path + "." + com.thumbnail.extension}></img>
+                                        <img src={availableSrc} loading='lazy'></img>
                                     </div>
                                     <div className='comic__card__text'>
                                         <p>{com.title}</p>
