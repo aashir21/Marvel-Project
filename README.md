@@ -15,7 +15,7 @@ DIVE IN
 
 ### Project Status
 
-Completed
+Updating
 - https://marvelinfohub.netlify.app/
 
 ## Technologies
