@@ -12,10 +12,11 @@ function ComicDetails() {
     const [prices,setPrices] = useState([]);
     const [loading,setLoading] = useState(true);
     const{comicId} = useParams();
+    const apiKey = process.env.REACT_APP_API_KEY;
     
 
     useEffect(()=>{
-        fetch(`https://gateway.marvel.com:443/v1/public/comics/${comicId}?apikey=73e90e2de84ca2d73e9114e7899b2706`)
+        fetch(`https://gateway.marvel.com:443/v1/public/comics/${comicId}?apikey=${apiKey}`)
         .then(response => response.json())
         .then((d) => {
             

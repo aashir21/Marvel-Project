@@ -7,11 +7,11 @@ function Comics() {
 
     const [comicList,setComicList] = useState([])
     const [loading,setLoading] = useState(true);
-
+    const apiKey = process.env.REACT_APP_API_KEY;
     
 
     useEffect(()=>{
-        fetch(`https://gateway.marvel.com:443/v1/public/comics?limit=100&offset=0&apikey=73e90e2de84ca2d73e9114e7899b2706`)
+        fetch(`https://gateway.marvel.com:443/v1/public/comics?limit=100&offset=0&apikey=${apiKey}`)
         .then(response => response.json())
         .then((data) => {
             setComicList(data.data.results)

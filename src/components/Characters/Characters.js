@@ -4,16 +4,18 @@ import './Characters.css'
 import {Link} from 'react-router-dom'
 import Loader from '../Loading/Loader';
 
+
 function Characters() {
 
   const [hero,setHero] = useState([]);
   const [loading,setLoading] = useState(true);
   document.title = "Characters"
+  const apiKey = process.env.REACT_APP_API_KEY;
 
   
 
   useEffect(()=>{
-    fetch("https://gateway.marvel.com:443/v1/public/characters?limit=100&offset=0&apikey=73e90e2de84ca2d73e9114e7899b2706")
+    fetch(`https://gateway.marvel.com:443/v1/public/characters?limit=100&offset=0&apikey=${apiKey}`)
     .then(res => res.json())
     .then((content) => {
       setHero(content.data.results)

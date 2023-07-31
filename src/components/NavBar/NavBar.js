@@ -5,6 +5,16 @@ import SearchForm from '../SearchForm/SearchForm'
 
 function NavBar() {
 
+    const links = document.querySelectorAll(".nav-links")
+
+    links.forEach((link) => {
+        link.addEventListener("click", () =>{
+            document.querySelector('.active')?.classList.remove('active')
+            link.classList.add('active')
+        })
+    })
+
+
   return (
 
     <>

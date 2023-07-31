@@ -10,9 +10,10 @@ function CharDetails() {
   const [stories,setStories] = useState([])
   const [loading,setLoading] = useState(true);
   const {characterId} = useParams();
+  const apiKey = process.env.REACT_APP_API_KEY;
 
   useEffect(()=>{
-    fetch(`https://gateway.marvel.com:443/v1/public/characters/${characterId}?apikey=73e90e2de84ca2d73e9114e7899b2706`)
+    fetch(`https://gateway.marvel.com:443/v1/public/characters/${characterId}?apikey=${apiKey}`)
     .then(responses => responses.json())
     .then((con) => {
       setDetails(con.data.results)

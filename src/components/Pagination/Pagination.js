@@ -9,11 +9,12 @@ function Pagination() {
     const [hero,setHero] = useState([]);
     const {pageNumber} = useParams();
     const [loading,setLoading] = useState(true);
+    const apiKey = process.env.REACT_APP_API_KEY;
 
     var offset = (pageNumber-1) * 100;
 
     useEffect(()=>{
-        fetch(`https://gateway.marvel.com:443/v1/public/characters?limit=100&offset=${offset}&apikey=73e90e2de84ca2d73e9114e7899b2706`)
+        fetch(`https://gateway.marvel.com:443/v1/public/characters?limit=100&offset=${offset}&apikey=${apiKey}`)
         .then(res => res.json())
         .then((content) => {
           setHero(content.data.results);
