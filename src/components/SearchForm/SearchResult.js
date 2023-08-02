@@ -12,9 +12,10 @@ function SearchResult() {
     const[searchCharacters, setSearchCharacters] = useState([])
     const[loading,setLoading] = useState(true);
     const {searchString} = useParams();
+    const apiKey = process.env.REACT_APP_API_KEY;
 
     useEffect(()=>{
-        fetch(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${searchString}&limit=100&offset=0&apikey=73e90e2de84ca2d73e9114e7899b2706`)
+        fetch(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${searchString}&limit=100&offset=0&apikey=${apiKey}`)
         .then(resp => resp.json())
         .then((content) =>{
             setSearchCharacters(content.data.results)
@@ -23,7 +24,7 @@ function SearchResult() {
     },[searchString,loading])
 
     useEffect(()=>{
-        fetch(`https://gateway.marvel.com:443/v1/public/comics?titleStartsWith=${searchString}&limit=100&offset=0&apikey=73e90e2de84ca2d73e9114e7899b2706`)
+        fetch(`https://gateway.marvel.com:443/v1/public/comics?titleStartsWith=${searchString}&limit=100&offset=0&apikey=${apiKey}`)
         .then(response => response.json())
         .then((data) => {
             setSearchComics(data.data.results);

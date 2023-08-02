@@ -7,11 +7,11 @@ function Comics() {
 
     const [comicList,setComicList] = useState([])
     const [loading,setLoading] = useState(true);
-
+    const apiKey = process.env.REACT_APP_API_KEY;
     
 
     useEffect(()=>{
-        fetch(`https://gateway.marvel.com:443/v1/public/comics?limit=100&offset=0&apikey=73e90e2de84ca2d73e9114e7899b2706`)
+        fetch(`https://gateway.marvel.com:443/v1/public/comics?limit=100&offset=0&apikey=${apiKey}`)
         .then(response => response.json())
         .then((data) => {
             setComicList(data.data.results)
@@ -41,11 +41,18 @@ function Comics() {
             <div className='comic__container'>
                 {
                     comicList.map((com)=>{
+
+                        const notAvailableSrc = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg";
+                        var availableSrc = com.thumbnail.path + "." + com.thumbnail.extension
+                        if(availableSrc === notAvailableSrc){
+                            availableSrc = "https://i.pinimg.com/736x/0e/3e/4a/0e3e4ad2efbc68906efb76d0b1928fee--marvel.jpg"
+                        }
+
                         return(
                             <Link to={`/comicdetails/${com.id}/${com.title}`} style={{textDecoration:'none'}}>
                                 <div className='comic__card' key={com.id}>
                                     <div className='comic__card__img'>
-                                        <img src={com.thumbnail.path + "." + com.thumbnail.extension}></img>
+                                        <img src={availableSrc} loading='lazy'></img>
                                     </div>
                                     <div className='comic__card__text'>
                                         <p>{com.title}</p>

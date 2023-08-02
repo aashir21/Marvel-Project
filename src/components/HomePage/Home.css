@@ -1,10 +1,12 @@
-html {
-  overflow-x: hidden;
+body{
+  background-color: #121212;
 }
 
-.hero {
+
+.hero{
   width: 100%;
-  height: 80vh;
+  height: 100vh;
+
 }
 
 .hero-con {
@@ -13,188 +15,231 @@ html {
   display: flex;
   justify-content: center;
   align-items:center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  
 }
 
+
+.hero-img{
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast; 
+  position: absolute;
+  z-index: -1;
+  
+}
+
+
 .hero-txt-con{
-  width: 50%;
+  position: absolute;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  text-align: center;
+  z-index: 1;
   
 }
 
 .hero-txt-holder{
-  margin: 0 auto;
-  width: 75%;
-  text-align: left;
+  width: 100%;
+  text-align: center;
   
 }
 
+.hero-txt-holder > p{
+  color: #FFF;
+  font-size: 1.5rem;
+  font-family: "Montserrat",sans-serif;
+  font-weight: 300;
+}
+
 .hero-txt-holder > h1{
-  color: #010101;
-  font-size: 4.25rem;
+  color: #FFFF;
+  font-size: 5rem;
   font-family: 'Poppins', sans-serif;
-  font-weight: 800;
-  margin: 0.5rem 0;
+  line-height: 1.2;
+  width: 100%;
+  font-weight: 500;
+  margin: 0.25rem 0;
+  text-transform: uppercase;
 }
 
 .hero-txt-holder > p{
-  color: #010101;
-  font-size: 1.25rem;
-  font-family: 'Poppins', sans-serif;
+  color: #FFF;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   
 }
 
-.iner{
-  font-family: Anton,sans-serif;
-  color: #ff0800;
-  letter-spacing: 2px;
-}
 
 .hero-btn{
-  padding: 0.7rem 1rem;
-  border: 2px solid #ff0800;
-  border-radius: 2rem;
-  background-color: white;
-  font-family: 'Poppins', sans-serif;
-  color: #010101;
+  padding: 1rem 3.25rem;
+  background-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  border: 2px solid white;
+  color: #FFFF;
   cursor: pointer;
-  transition: all 300ms ease-in-out;
+  transition: ease-in-out 300ms all;
+}
+
+.hero-btn:hover{
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 
-.hero-carousel{
-  width: 50%;
+
+.faction-section {
+  width: 100%;
+  height: 100vh;
+
+}
+
+.faction-holder {
+  width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.faction-text{
+  width: 45%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   
 }
 
-.character-section {
-  width: 100%;
-  height: auto;
-  padding: 5rem;
-  margin: 2rem 0;
+.faction-text-holder{
+  height: 100%;
+  width: 90%;
 }
 
-.character-holder {
+.faction-text-holder > h1{
+  width: 100%;
+  margin: 0 auto;
+  font-size: 3rem;
+  font-family: "Montserrat",sans-serif;
+  color: #FFFF;
+  font-weight: 500;
+  text-align: left
+}
+
+
+.faction-text-holder > p{
+  width: 100%;
+  font-size: 1.125rem;
+  color: #FFF;
+  font-family: "Montserrat",sans-serif;
+  margin: 1rem auto;
+  line-height: 1.8;
+}
+
+.faction-img{
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  height: 100%;
+  width: 100%;
+}
+
+.btn-holder{
+  width: 80%;
+}
+
+.character-section{
+  width: 100%;
+  height: 100vh;
+}
+
+.character-container{
   width: 100%;
   height: 100%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.character-text {
+.character-img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.character-text{
   width: 50%;
   height: 80%;
-  line-height: 2;
-  text-align: left;
-  font-weight: 300;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.25rem;
-  color: #090806;
-}
-
-.text-holder{
-  width: 90%;
-  margin: auto;
-  
-}
-
-.text-holder-char{
-  width: 100%;
-  margin: auto;
-}
-
-.character-text h1 {
-  font-family: Anton, sans-serif;
-  font-size: 3.5rem;
-  color: #ff0800;
-  letter-spacing: 5px;
-  margin: 0;
-  padding: 0;
-}
-
-
-.comic-section {
-  width: 100%;
-  height: auto;
-  margin: 2rem 0;
-}
-
-.comic-container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.comic-img {
-  height: auto;
-  width: 50%;
- 
-}
-
-.com-img{
-  width: 100%;
-  height: 100%;
-}
-
-.comic-text {
-  height: 100%;
-  width: 50%;
-  line-height: 2;
-  font-weight: 300;
-  text-align: left;
-  color: #090806;
-  font-size: 1.25rem;
-  font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.comic-text h1 {
-  font-size: 3.5rem;
-  color: #ff0800;
-  font-family: Anton, sans-serif;
-  letter-spacing: 5px;
-  margin: 0 auto;
-  padding: 0;
+.character-text-holder{
+  width: 80%;
 }
 
-.learn-btn {
-  padding: 0.7rem 1rem;
-  border: 2px solid #ff0800;
-  border-radius: 2rem;
-  background-color: white;
-  font-family: 'Poppins', sans-serif;
-  color: #010101;
-  cursor: pointer;
-  transition: all 300ms ease-in-out;
-}
-
-.learn-btn:hover{
-  background-color: #ff0800;
+.character-text-holder > h1{
+  font-size: 3rem;
   color: #FFFF;
+  font-family: "Montserrat",sans-serif;
+  font-weight: 500;
 }
 
-.latest-news{
+.character-text-holder > p{
+  font-size: 1.125rem;
+  color: #FFF;
+  font-family: "Montserrat",sans-serif;
+  margin: 1rem auto;
+  line-height: 1.8;
+}
+
+
+
+.comic-section{
   width: 100%;
   height: 100vh;
 }
-.latest-news-con{
+
+.comic-con{
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.65);
 }
 
-.latest-news-text{
+.comic-img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  
+}
+
+.comic-text{
   width: 50%;
   height: 100%;
   display: flex;
@@ -202,43 +247,37 @@ html {
   align-items: center;
 }
 
-.text-holder{
-  width: 75%;
-  margin: auto;
-  line-height: 2;
-  font-weight: 300;
-  text-align: left;
-  color: #090806;
-  font-size: 1.25rem;
-  font-family: 'Poppins', sans-serif;
+
+.comic-text-holder > h1{
+  font-family: "Montserrat",sans-serif;
+  font-size: 5rem;
+  color: #FFFF;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
 }
 
-.text-holder > h1{
-  font-size: 3.5rem;
-  color: #ff0800;
-  font-family: "Anton",sans-serif;
-  letter-spacing: 5px;
+.comic-text-holder > p{
+  font-size: 1.125rem;
+  color: #FFF;
+  font-family: "Montserrat",sans-serif;
+  margin: 1rem auto;
+  text-align: center;
+  line-height: 1.8;
 }
 
-.latest-news-img{
-  height: 85%;
-  width: 50%;
+.btn-holder{
+  display: grid;
+  align-items: center;
 }
 
-.latest-img{
-  width: 100%;
-  height: auto;
-}
+
+
+/* Media Query for Tablets & Above */
 
 @media screen and (min-width: 750px) and (max-width: 1100px) {
   .hero{
-    min-height: 80vh;
-    margin: 1rem 0;
-  }
-
-  .hero-con{
-    flex-direction: column-reverse;
-    
+    height: 100vh;
   }
 
   .hero-txt-con{
@@ -252,351 +291,252 @@ html {
     
   }
 
-  .hro-img{
-    width: 100%;
-    height: auto;
 
-    margin: 2rem 0;
+  .hero-txt-holder > h1{
+    font-weight: 500;
+
   }
 
   .hero-txt-holder > h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-top: 1rem;
   }
 
   .hero-txt-holder > p{
-    font-size: 1.875rem;
-  }
-
-  .hero-btn{
     font-size: 1.125rem;
   }
 
-  .character-section {
-    height: auto;
-    padding: 0;
-  }
-
-  .text-holder-char{
-    width: 90%;
-    margin: 2rem auto;
-  }
-
-  
-
-  .text-holder-char > p{
-    font-size: 1.875rem;
-  }
-
-  .character-holder {
-    flex-direction: column-reverse;
-  }
-
-  .comic-section {
-    min-height: 100vh;
-    margin-bottom: 1rem;
-  }
-
-  .comic-container {
-    flex-direction: column;
-  }
-
-  .comic-img,
-  .character-img {
-    width: 90%;
-    height: 50%;
-    line-height: normal;
-  }
-
-  .comic-text,
-  .character-text {
-    width: 90%;
-    height: auto;
-    line-height: normal;
-  }
-
-  .comic-text h1,
-  .character-text h1 {
-    font-size: 3rem;
-  }
-
-  .learn-btn {
-    margin-bottom: 1rem;
-    font-size: 1.125rem;
-  }
-
-  .latest-news-con{
-    flex-direction: column-reverse;
-  }
-  .latest-news{
-    height: auto;
-    margin-bottom: 2rem;
-  }
-
-  .latest-news-img{
-    width: auto;
-    height: 75%;
-  }
-
-  .latest-news-text{
+  .faction-text{
     width: 100%;
-    height: 50%;
-  }
-
-  .text-holder > h1{
-    font-size: 3rem;
-  }
-
-  .text-holder > p{
-    font-size: 1.875rem;
-  }
-
-  .text-holder{
-    width: 75%;
-    height: auto;
-    line-height: normal;
-  }
-}
-
-@media screen and (min-width: 400px) and (max-width: 749px) {
-
-  .hero{
-    height: auto;
-    margin: 1rem 0;
-  }
-
-  .hero-con{
-    flex-direction: column-reverse;
-    
-  }
-
-  .hero-txt-con{
-    width: 80%;
-    margin: auto;
-  }
-
-  .hero-txt-holder{
-    width: 100%;
-    height: auto;
-    
-  }
-
-
-  .hero-txt-holder > h1{
-    font-weight: 500;
-  }
-
-  .hro-img{
-    width: 100%;
-    height: auto;
-    scale: 1.5;
-    margin: 2rem 0;
-  }
-
-  .hero-txt-holder > h1{
-    font-size: 2rem;
-    margin-top: 1rem;
-  }
-
-  .hero-txt-holder > p{
-    font-size: 1.25rem;
-  }
-
-  .character-section {
-    height: auto;
-    padding: 0;
-  }
-
-  .text-holder-char{
-    width: 90%;
-    margin: 2rem auto;
-  }
-
-  .character-holder {
-    flex-direction: column-reverse;
-  }
-
-  .comic-section {
-    min-height: 100vh;
-    margin-bottom: 1rem;
-  }
-
-  .comic-container {
-    flex-direction: column;
-  }
-
-  .comic-img,
-  .character-img {
-    width: 90%;
-    height: 50%;
-    line-height: normal;
-  }
-
-  .comic-text,
-  .character-text {
-    width: 90%;
-    height: auto;
-    line-height: normal;
-  }
-
-  .comic-text h1,
-  .character-text h1 {
-    font-size: 1.75rem;
-    font-weight: 500;
-  }
-
-  .learn-btn {
-    margin-bottom: 1rem;
-    font-size: 0.75rem;
-  }
-
-  .latest-news-con{
-    flex-direction: column-reverse;
-  }
-  .latest-news{
-    height: auto;
-  }
-
-  .latest-news-img{
-    width: 100%;
-    height: 50%;
-  }
-
-  .latest-news-text{
-    width: 100%;
-    height: 50%;
-  }
-
-  .text-holder > h1{
-    font-size: 1.75rem;
-    font-weight: 500;
-  }
-
-  .text-holder{
-    width: 75%;
-    height: auto;
-    line-height: normal;
-  }
-
-}
-
-@media screen and (min-width: 250px) and (max-width: 399px) {
-  .hero{
-    height: auto;
-    margin: 1rem 0;
-  }
-
-  .hero-con{
-    flex-direction: column-reverse;
-    
-  }
-
-  .hero-txt-con{
-    width: 80%;
-    margin: auto;
-  }
-
-  .hero-txt-holder{
-    width: 100%;
-    height: auto;
-    
-  }
-
-  .hro-img{
-    width: 100%;
-    height: auto;
-    scale: 1.175;
-    margin: 0;
-  }
-
-  .hero-txt-holder > h1{
-    font-size: 1.75rem;
-    margin-top: 1rem;
-  }
-
-  .hero-txt-holder > p{
-    font-size: 1.15rem;
-  }
-
-  .character-section {
-    height: auto;
-    padding: 0;
-  }
-
-  .text-holder-char{
-    width: 90%;
-    margin: 1rem auto;
-  }
-
-  .character-holder {
-    flex-direction: column-reverse;
-  }
-
-  .comic-section {
-    min-height: 100vh;
-    margin-bottom: 1rem;
-  }
-
-  .comic-container {
-    flex-direction: column;
-  }
-
-  .comic-img,
-  .character-img {
-    width: 90%;
-    height: 50%;
-    line-height: normal;
-  }
-
-  .comic-text,
-  .character-text {
-    width: 90%;
-    height: auto;
-    line-height: normal;
-  }
-
-  .comic-text h1,
-  .character-text h1 {
-    font-size: 1.75rem;
-  }
-
-  .learn-btn {
-    margin-bottom: 1rem;
-    font-size: 0.75rem;
-  }
-
-  .latest-news{
-    height: auto;
-  }
-
-  .latest-news-con{
-    flex-direction: column-reverse;
-  }
-  .latest-news{
-    min-height: 100vh;
-  }
-
-  .latest-news-img{
-    width: 100%;
-    height: 50%;
-  }
-
-  .latest-img{
     height: 100%;
   }
 
-  .latest-news-text{
+  .faction-text-holder{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .character-section {
+    height: 100vh;
     width: 100%;
-    height: 50%;
   }
 
-  .text-holder > h1{
-    font-size: 1.75rem;
+
+  .text-holder-char{
+    width: 90%;
+    margin: 2rem auto;
   }
 
-  .text-holder{
-    width: 75%;
+  .character-holder {
+    flex-direction: column-reverse;
+  }
+
+  .comic-section {
+    min-height: 100vh;
+  }
+
+  .comic-container {
+    flex-direction: column;
+  }
+
+
+  .comic-text,
+  .character-text {
+    width: 90%;
     height: auto;
     line-height: normal;
+  }
+
+  .comic-text h1 {
+    font-size: 2.25rem;
+    font-weight: 500;
+  }
+
+  .comic-text-holder p {
+    font-size: 0.975rem;
+  } 
+}
+
+/* Media Query for Modern Phones */
+
+@media screen and (min-width: 400px) and (max-width: 749px) {
+
+
+  .hero{
+    height: 100vh;
+  }
+
+  .hero-txt-con{
+    width: 80%;
+    margin: auto;
+  }
+
+  .hero-txt-holder{
+    width: 100%;
+    height: auto;
+    
+  }
+
+
+  .hero-txt-holder > h1{
+    font-weight: 500;
+
+  }
+
+  .hero-txt-holder > h1{
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  .hero-txt-holder > p{
+    font-size: 1.125rem;
+  }
+
+  .faction-text{
+    width: 100%;
+    height: 100%;
+  }
+
+  .faction-text-holder{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .character-section {
+    height: 100vh;
+    width: 100%;
+  }
+
+
+  .text-holder-char{
+    width: 90%;
+    margin: 2rem auto;
+  }
+
+  .character-holder {
+    flex-direction: column-reverse;
+  }
+
+  .comic-section {
+    min-height: 100vh;
+  }
+
+  .comic-container {
+    flex-direction: column;
+  }
+
+
+  .comic-text,
+  .character-text {
+    width: 90%;
+    height: auto;
+    line-height: normal;
+  }
+
+  .comic-text h1 {
+    font-size: 2.25rem;
+    font-weight: 500;
+  }
+
+  .comic-text-holder p {
+    font-size: 0.975rem;
+  }
+
+}
+
+
+/* Media Query for Older & Smaller Phones */
+
+@media screen and (min-width: 250px) and (max-width: 399px) {
+  .hero{
+    height: 100vh;
+  }
+
+  .hero-txt-con{
+    width: 80%;
+    margin: auto;
+  }
+
+  .hero-txt-holder{
+    width: 100%;
+    height: auto;
+    
+  }
+
+
+  .hero-txt-holder > h1{
+    font-weight: 500;
+
+  }
+
+  .hero-txt-holder > h1{
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  .hero-txt-holder > p{
+    font-size: 1.125rem;
+  }
+
+  .faction-text{
+    width: 100%;
+    height: 100%;
+  }
+
+  .faction-text-holder{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .character-section {
+    height: 100vh;
+    width: 100%;
+  }
+
+
+  .text-holder-char{
+    width: 90%;
+    margin: 2rem auto;
+  }
+
+  .character-holder {
+    flex-direction: column-reverse;
+  }
+
+  .comic-section {
+    min-height: 100vh;
+  }
+
+  .comic-container {
+    flex-direction: column;
+  }
+
+
+  .comic-text,
+  .character-text {
+    width: 90%;
+    height: auto;
+    line-height: normal;
+  }
+
+  .comic-text h1 {
+    font-size: 2.25rem;
+    font-weight: 500;
+  }
+
+  .comic-text-holder p {
+    font-size: 0.975rem;
   }
 }

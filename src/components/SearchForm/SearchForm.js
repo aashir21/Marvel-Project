@@ -16,9 +16,11 @@ function SearchForm() {
 
   return (
 
-    <form onSubmit = {handleSubmit}>
+    <div className='form-con'>
+      <form onSubmit = {handleSubmit}>
         <input type="text" id='val' className='search-bar' placeholder='Enter Keyword' onChange={(e)=> e.target.value}></input>
-    </form>
+      </form>
+    </div>
 
   )
 }

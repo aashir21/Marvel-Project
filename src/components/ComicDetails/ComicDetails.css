@@ -1,7 +1,7 @@
 .comic__detail__banner {
   width: 75%;
   height: 75vh;
-  margin: auto;
+  margin: 3rem auto;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -38,7 +38,7 @@
   font-size: 1.15rem;
   line-height: 1.6;
   text-transform: capitalize;
-  color: black;
+  color: #FFFF;
 }
 
 .comic__price__con {
@@ -54,7 +54,7 @@
 .comic__description h1 {
   font-family: Anton, sans-serif;
   font-weight: 500;
-  color: #ff0800;
+  color: #ffff;
   text-decoration: underline;
 }
 
@@ -63,7 +63,7 @@
   font-size: 1.15rem;
   line-height: 1.6;
   text-transform: capitalize;
-  color: black;
+  color: #FFFF;
 }
 
 .characters__involved__banner {
@@ -84,14 +84,14 @@
 .chrs__title h1 {
   font-family: Anton, sans-serif;
   font-weight: 500;
-  color: #ff0800;
+  color: #FFFF;
   margin: 2rem 0 2rem 0;
   letter-spacing: 3px;
   text-decoration: underline;
 }
 
 .chr__name {
-  color: #000;
+  color: #FFFF;
   font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
   font-weight: 500;
@@ -115,7 +115,7 @@
 .creator__header h1 {
   font-family: Anton, sans-serif;
   font-weight: 500;
-  color: #ff0800;
+  color: #FFFF;
   margin: 2rem 0 2rem 0;
   letter-spacing: 3px;
   text-decoration: underline;
@@ -124,5 +124,5 @@
 .not-fnd{
   font-size: 1.25rem;
   font-family: "Poppins",sans-serif;
-  color: #010101;
+  color: #FFFF;
 }

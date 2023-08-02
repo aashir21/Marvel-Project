@@ -12,10 +12,11 @@ function ComicDetails() {
     const [prices,setPrices] = useState([]);
     const [loading,setLoading] = useState(true);
     const{comicId} = useParams();
+    const apiKey = process.env.REACT_APP_API_KEY;
     
 
     useEffect(()=>{
-        fetch(`https://gateway.marvel.com:443/v1/public/comics/${comicId}?apikey=73e90e2de84ca2d73e9114e7899b2706`)
+        fetch(`https://gateway.marvel.com:443/v1/public/comics/${comicId}?apikey=${apiKey}`)
         .then(response => response.json())
         .then((d) => {
             
@@ -37,7 +38,13 @@ function ComicDetails() {
             {
             comicDetails.map(cDetails => {
                 
-                const link = cDetails.thumbnail.path + "." + cDetails.thumbnail.extension;
+                var link = cDetails.thumbnail.path + "." + cDetails.thumbnail.extension;
+                const notAvailableSrc = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg"
+
+                if(link === notAvailableSrc){
+                    link = "https://i.pinimg.com/736x/0e/3e/4a/0e3e4ad2efbc68906efb76d0b1928fee--marvel.jpg"
+                }
+
                 document.title = cDetails.title;
 
                 return(

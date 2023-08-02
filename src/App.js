@@ -13,6 +13,7 @@ import ComicsPagination from './components/Pagination/ComicsPagination';
 import ComicDetails from './components/ComicDetails/ComicDetails';
 import SearchResult from './components/SearchForm/SearchResult'
 import Discover from './components/Discover/Discover';
+import Factions from './components/Factions/Factions'
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -31,9 +32,10 @@ function App() {
         <Route exact path='/comicdetails/:comicId/:comicTitle' element={<ComicDetails/>}></Route>
         <Route exact path='/searchResult/:searchString' element={<SearchResult></SearchResult>}></Route>
         <Route exact path='/discover' element={<Discover></Discover>}></Route>
+        <Route exact path="/factions" element = {<Factions></Factions>}></Route>
       </Routes>
 
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }
