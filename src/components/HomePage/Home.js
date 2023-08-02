@@ -12,7 +12,7 @@ function Home() {
   
   return (
     <React.Fragment>
-      
+    
       <section className='hero'>
         <div className='hero-con'>
             

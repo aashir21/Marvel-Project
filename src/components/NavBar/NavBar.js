@@ -14,6 +14,11 @@ function NavBar() {
         })
     })
 
+    const handleExpand = () => {
+        const btn = document.querySelector(".expanded-menu")
+        btn.classList.toggle("menu-active")
+    }
+
 
   return (
 
@@ -33,10 +38,6 @@ function NavBar() {
                             <h1>Factions</h1>
                         </Link>
 
-                        {/* <Link to="/discover" className='nav-links'>
-                            <h1>Discover</h1>
-                        </Link> */}
-
                         <Link to="/characters" className='nav-links'>
                             <h1>Characters</h1>
                         </Link>
@@ -46,9 +47,33 @@ function NavBar() {
 
                     </ul>
                 </div>
+                    
+                
+                <svg onClick={handleExpand} className='hamburger-btn' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 14" id="menu"><g fill="none" fill-rule="evenodd" stroke="#FFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="translate(1 1)"><path d="M0 6h18M0 0h18M0 12h18"></path></g></svg>
 
-                <SearchForm></SearchForm>
 
+                <div className='srch'>
+                    <SearchForm></SearchForm>
+                </div>
+
+            </div>
+
+            <div className='expanded-menu'>
+                <div className='expanded-links'>
+                    <ul>
+                        <Link to="/factions" className='expanded-nav-links'>
+                            <h1>Factions</h1>
+                        </Link>
+
+                        <Link to="/characters" className='expanded-nav-links'>
+                            <h1>Characters</h1>
+                        </Link>
+                        <Link to="/comics" className='expanded-nav-links'>
+                            <h1>Comics</h1>
+                        </Link>
+
+                    </ul>
+                </div>
             </div>
 
         </header>

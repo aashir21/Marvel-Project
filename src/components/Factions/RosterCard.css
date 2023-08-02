@@ -37,7 +37,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.35);
     z-index: 5;
     transition: 300ms ease-in-out all;
 }
@@ -52,4 +52,26 @@
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.0);
     border-left: 5px solid #FF0000;
+}
+
+@media screen and (min-width: 400px) and (max-width: 749px){
+
+    .roster-card-title{
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: left;
+        padding: 0;
+        margin: 0 0.35rem;
+    }
+
+}
+
+@media screen and (min-width: 250px) and (max-width: 399px){
+    .roster-card-title{
+        font-size: 0.875rem;
+        font-weight: 500;
+        text-align: left;
+        padding: 0;
+        margin: 0 0.35rem;
+    }
 }
