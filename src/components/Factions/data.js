@@ -1,3 +1,5 @@
+
+
 const avengerObj = [];
 
 export const fetchData = (id) => {

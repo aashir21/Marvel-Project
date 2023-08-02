@@ -94,7 +94,8 @@
     width: 50%;
     height: 90%;
     object-fit: contain;
-    
+    display: none; 
+    /* change display type to display images    */
 }
 
 #faction-hero-para{
