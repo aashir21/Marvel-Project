@@ -23,11 +23,11 @@ function Home() {
                 <h1>Descend into Marvel's Realm</h1>
                 <p>Where Heroes and Villains Collide!</p>
                 <p>Immerse Yourself in Marvel's Infinite Universe of Heroes</p>
-                <a href='/discover'><button className='hero-btn'>DISCOVER </button></a>
+                {/* <a href='/discover'><button className='hero-btn'>DISCOVER </button></a> */}
               </div>
             </div>
-
           </div>
+
       </section>
 
       <section className='faction-section'>
